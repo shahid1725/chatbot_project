@@ -125,16 +125,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+
+from dotenv import load_dotenv
+import os
+load_dotenv() 
 # settings.py
-MICROSOFT_CLIENT_ID = '90c7d95b-96b4-4f93-a6df-97de1b0a6488'
-MICROSOFT_CLIENT_SECRET = 'PeN8Q~GSGIBCGC1Eoea76l.FS6kRYeKXLcM_daGZ'
-MICROSOFT_TENANT_ID = '0fb69ca9-4fc8-4361-ab93-cba3f03f1ea7'
-MICROSOFT_ONE_DRIVE_FOLDER_ID = 'YOUR_ONEDRIVE_FOLDER_ID'
-MICROSOFT_GRAPH_SCOPE = ['Files.ReadWrite.All']
-MICROSOFT_REDIRECT_URI = 'http://localhost:8000/callback'
+MICROSOFT_CLIENT_ID = os.getenv('MICROSOFT_CLIENT_ID')
+MICROSOFT_CLIENT_SECRET = os.getenv('MICROSOFT_CLIENT_SECRET')
+MICROSOFT_TENANT_ID = os.getenv('MICROSOFT_TENANT_ID')
+MICROSOFT_ONE_DRIVE_FOLDER_ID = os.getenv('MICROSOFT_ONE_DRIVE_FOLDER_ID')
+MICROSOFT_GRAPH_SCOPE = os.getenv('MICROSOFT_GRAPH_SCOPE')
+MICROSOFT_REDIRECT_URI = os.getenv('MICROSOFT_REDIRECT_URI')
 
 
-CLIENT_ID = '90c7d95b-96b4-4f93-a6df-97de1b0a6488'  # Replace with your Azure AD Application (client) ID
-CLIENT_SECRET = 'PeN8Q~GSGIBCGC1Eoea76l.FS6kRYeKXLcM_daGZ'  # Replace with your Azure AD Application secret
-TENANT_ID = '0fb69ca9-4fc8-4361-ab93-cba3f03f1ea7'  # Replace with your Azure AD tenant ID
+CLIENT_ID = os.getenv('CLIENT_ID')  # Replace with your Azure AD Application (client) ID
+CLIENT_SECRET = CLIENT_SECRET = os.getenv('CLIENT_SECRET')  # Replace with your Azure AD Application secret
+TENANT_ID = os.getenv('TENANT_ID')  # Replace with your Azure AD tenant ID
 
