@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chatbot'
+    'chatbot',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -141,4 +142,15 @@ MICROSOFT_REDIRECT_URI = os.getenv('MICROSOFT_REDIRECT_URI')
 CLIENT_ID = os.getenv('CLIENT_ID')  # Replace with your Azure AD Application (client) ID
 CLIENT_SECRET = CLIENT_SECRET = os.getenv('CLIENT_SECRET')  # Replace with your Azure AD Application secret
 TENANT_ID = os.getenv('TENANT_ID')  # Replace with your Azure AD tenant ID
+
+
+POWER_AUTOMATE_FLOW_URL = os.getenv('POWER_AUTOMATE_FLOW_URL')
+
+
+
+
+
+
+
+
 
